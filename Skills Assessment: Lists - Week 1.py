@@ -55,18 +55,19 @@ def print_indexes(my_list):
         print i,  items
 
 
-# def long_words(word_list):
-#     """Return all words in input list that are longer than 4 characters.
+def long_words(word_list):
+     """Return all words in input list that are longer than 4 characters.
 
-#         >>> long_words(["hello", "hey", "spam", "spam", "bacon", "bacon"])
-#         ['hello', 'bacon', 'bacon']
+         >>> long_words(["hello", "hey", "spam", "spam", "bacon", "bacon"])
+         ['hello', 'bacon', 'bacon']
 
-#         >>> long_words(["all", "are", "tiny"])
-#         []
+         >>> long_words(["all", "are", "tiny"])
+         []
 
-#     """
+     """
+     more_than_four = [words for words in word_list if len(words)>4]
 
-#     return ['the wrong thing']
+     return more_than_four
 
 
 # def smallest_int(number_list):
