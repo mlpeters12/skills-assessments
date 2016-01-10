@@ -265,11 +265,12 @@ def join_strings_with_comma(list_of_words):
         if len(list_of_words) < 2:
             string_list += word
         else:
-            last_word = list_of_words[-1:]
+            last_word = list(list_of_words[-1:])
             print last_word
-            list_without_last_word = list_of_words[:-1]
+            list_without_last_word = list(list_of_words[:-1])
             print list_without_last_word
-            
+            string_list += list_without_last_word + word + ", " + last_word
+
 
     return string_list
 
