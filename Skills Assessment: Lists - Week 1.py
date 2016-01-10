@@ -197,24 +197,25 @@ def mult_numbers(number_list):
      return product
 
 
-# def join_strings(word_list):
-#     """Return a string of all input strings joined together.
-
-#     Python has a built-in method on lists, `join`---but for this exercise, you
-#     should not use it.
-
-#         >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
-#         'spamspambaconballoonicorn'
-
-#     For an empty list, you should return an empty string:
-
-#         >>> join_strings([])
-#         ''
-
-#     """
-
-#     return "Not the right thing"
-
+def join_strings(word_list):
+    """Return a string of all input strings joined together.
+        
+        Python has a built-in method on lists, `join`---but for this exercise, you
+        should not use it.
+        
+        >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
+        'spamspambaconballoonicorn'
+        
+        For an empty list, you should return an empty string:
+        
+        >>> join_strings([])
+        ''
+        """
+    string_list = ""
+    for word in word_list:
+        string_list += word
+        string_list = string_list[0:]
+    return string_list
 
 # def average(number_list):
 #     """Return the average (mean) of the list of numbers given.
