@@ -70,27 +70,38 @@ def long_words(word_list):
      return more_than_four
 
 
-# def smallest_int(number_list):
-#     """Find the smallest integer in a list of integers and return it.
 
-#     DO NOT USE the built-in function `min`!
+def smallest_int(number_list):
+    """Find the smallest integer in a list of integers and return it.
+        
+        DO NOT USE the built-in function `min`!
+        
+        >>> smallest_int([-5, 2, -5, 7])
+        -5
+        
+        
+        >>> smallest_int([3, 7, 2, 8, 4])
+        2
+        
+        If the input list is empty, return None:
+        
+        
+        >>> smallest_int([]) is None
+        True
+        
+        """
+    small_number_list= []
+    
+    min_number = number_list[0]
 
-#         >>> smallest_int([-5, 2, -5, 7])
-#         -5
+    for num in number_list:
+        if num < min_number:
+            min_number = num
+            small_number_list.append(min_number)
+            return small_number_list
+        else:
+            return None
 
-
-#         >>> smallest_int([3, 7, 2, 8, 4])
-#         2
-
-#     If the input list is empty, return None:
-
-
-#         >>> smallest_int([]) is None
-#         True
-
-#     """
-
-#     return 100
 
 
 # def largest_int(number_list):
