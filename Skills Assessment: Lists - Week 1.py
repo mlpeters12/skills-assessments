@@ -152,7 +152,7 @@ def word_lengths(word_list):
      return length
 
 
- def sum_numbers(number_list):
+def sum_numbers(number_list):
      """Return the sum of all of the numbers in the list.
 
      Python has a built-in function, `sum()`, which already does this -- but for
