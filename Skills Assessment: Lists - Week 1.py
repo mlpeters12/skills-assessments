@@ -71,59 +71,65 @@ def long_words(word_list):
 
 
 
-# def smallest_int(number_list):
-#    """Find the smallest integer in a list of integers and return it.
+def smallest_int(number_list):
+    """Find the smallest integer in a list of integers and return it.
        
-#        DO NOT USE the built-in function `min`!
+        DO NOT USE the built-in function `min`!
        
-#        >>> smallest_int([-5, 2, -5, 7])
-#        -5
-       
-       
-#        >>> smallest_int([3, 7, 2, 8, 4])
-#        2
-       
-#        If the input list is empty, return None:
+        >>> smallest_int([-5, 2, -5, 7])
+        -5
        
        
-#        >>> smallest_int([]) is None
-#        True
+        >>> smallest_int([3, 7, 2, 8, 4])
+        2
        
-#        """
-#    small_number_list= []
-
-#    min_number = number_list[0]
-
-#    for num in number_list:
-#        if num < min_number:
-#            min_number = num
-#            small_number_list.append(min_number)
-#            return small_number_list
-#        else:
-#            return None
+        If the input list is empty, return None:
+       
+       
+        >>> smallest_int([]) is None
+        True
+       
+        """
 
 
 
-# def largest_int(number_list):
-#     """Find the largest integer in a list of integers and return it.
+    if len(number_list) == 0:
+        return None
+        
+    min_number = number_list[0]
+    for num in number_list[1:]:
+        if num < min_number:
+            min_number = num
+    return min_number
 
-#     DO NOT USE the built-in function `max`!
 
-#         >>> largest_int([-5, 2, -5, 7])
-#         7
 
-#         >>> largest_int([3, 7, 2, 8, 4])
-#         8
 
-#     If the input list is empty, return None:
-
-#         >>> largest_int([]) is None
-#         True
-
-#     """
-
-#     return 0
-
+def largest_int(number_list):
+    """Find the largest integer in a list of integers and return it.
+        
+        DO NOT USE the built-in function `max`!
+        
+        >>> largest_int([-5, 2, -5, 7])
+        7
+        
+        >>> largest_int([3, 7, 2, 8, 4])
+        8
+        
+        If the input list is empty, return None:
+        
+        >>> largest_int([]) is None
+        True
+        
+        """
+    if len(number_list) == 0:
+        return None
+    
+    max_number = number_list[0]
+    for num in number_list[1:]:
+        if num > max_number:
+            max_number = num
+    return max_number
 
 def halvesies(number_list):
      """Return list of numbers from input list, each divided by two.
@@ -236,21 +242,37 @@ def average(number_list):
     return mean
 
 
-# def join_strings_with_comma(list_of_words):
-#     """Return ['list', 'of', 'words'] like "list, of, words".
+def join_strings_with_comma(list_of_words):
+    """Return ['list', 'of', 'words'] like "list, of, words".
+        
+        >>> join_strings_with_comma(["Labrador", "Poodle", "French Bulldog"])
+        'Labrador, Poodle, French Bulldog'
+        
+        If there's only one thing in the list, it should return just that
+        thing, of course:
+        
+        >>> join_strings_with_comma(["Pretzel"])
+        'Pretzel'
+        
+        """
 
-#         >>> join_strings_with_comma(["Labrador", "Poodle", "French Bulldog"])
-#         'Labrador, Poodle, French Bulldog'
 
-#     If there's only one thing in the list, it should return just that
-#     thing, of course:
+    string_list = ""
+    if len(list_of_words) == 0:
+        return None
+   
+    for word in list_of_words:
+        if len(list_of_words) < 2:
+            string_list += word
+        else:
+            last_word = list_of_words[-1:]
+            print last_word
+            list_without_last_word = list_of_words[:-1]
+            print list_without_last_word
+            
 
-#         >>> join_strings_with_comma(["Pretzel"])
-#         'Pretzel'
+    return string_list
 
-#     """
-
-#     return ""
 
 
 ##############################################################################
