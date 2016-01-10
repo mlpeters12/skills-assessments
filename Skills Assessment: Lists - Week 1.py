@@ -173,26 +173,28 @@ def sum_numbers(number_list):
      return starting_point
 
 
-# def mult_numbers(number_list):
-#     """Return product (result of multiplication) of the numbers in the list.
+def mult_numbers(number_list):
+     """Return product (result of multiplication) of the numbers in the list.
 
-#         >>> mult_numbers([1, 2, 3])
-#         6
+         >>> mult_numbers([1, 2, 3])
+         6
 
-#     Obviously, if there is a zero in the input, the product will be zero:
+     Obviously, if there is a zero in the input, the product will be zero:
 
-#         >>> mult_numbers([10, 20, 0, 50])
-#         0
+         >>> mult_numbers([10, 20, 0, 50])
+         0
 
-#     As explained at http://en.wikipedia.org/wiki/Empty_product, if the list is
-#     empty, the product should be 1:
+     As explained at http://en.wikipedia.org/wiki/Empty_product, if the list is
+     empty, the product should be 1:
 
-#         >>> mult_numbers([])
-#         1
+         >>> mult_numbers([])
+         1
 
-#     """
-
-#     return None
+     """
+     product = 1
+     for num in number_list:
+        product *=num
+     return product
 
 
 # def join_strings(word_list):
