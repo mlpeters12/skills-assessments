@@ -141,15 +141,15 @@ def halvesies(number_list):
      return divided
 
 
-# def word_lengths(word_list):
-#     """Return the length of words in the input list.
+def word_lengths(word_list):
+     """Return the length of words in the input list.
 
-#         >>> word_lengths(["hello", "hey", "hello", "spam"])
-#         [5, 3, 5, 4]
+         >>> word_lengths(["hello", "hey", "hello", "spam"])
+         [5, 3, 5, 4]
 
-#     """
-
-#     return []
+     """
+     length =[len(word) for word in word_list]
+     return length
 
 
 # def sum_numbers(number_list):
