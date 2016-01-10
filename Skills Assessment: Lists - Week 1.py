@@ -71,36 +71,36 @@ def long_words(word_list):
 
 
 
-def smallest_int(number_list):
-    """Find the smallest integer in a list of integers and return it.
-        
-        DO NOT USE the built-in function `min`!
-        
-        >>> smallest_int([-5, 2, -5, 7])
-        -5
-        
-        
-        >>> smallest_int([3, 7, 2, 8, 4])
-        2
-        
-        If the input list is empty, return None:
-        
-        
-        >>> smallest_int([]) is None
-        True
-        
-        """
-    small_number_list= []
-    
-    min_number = number_list[0]
+# def smallest_int(number_list):
+#    """Find the smallest integer in a list of integers and return it.
+       
+#        DO NOT USE the built-in function `min`!
+       
+#        >>> smallest_int([-5, 2, -5, 7])
+#        -5
+       
+       
+#        >>> smallest_int([3, 7, 2, 8, 4])
+#        2
+       
+#        If the input list is empty, return None:
+       
+       
+#        >>> smallest_int([]) is None
+#        True
+       
+#        """
+#    small_number_list= []
 
-    for num in number_list:
-        if num < min_number:
-            min_number = num
-            small_number_list.append(min_number)
-            return small_number_list
-        else:
-            return None
+#    min_number = number_list[0]
+
+#    for num in number_list:
+#        if num < min_number:
+#            min_number = num
+#            small_number_list.append(min_number)
+#            return small_number_list
+#        else:
+#            return None
 
 
 
@@ -125,20 +125,20 @@ def smallest_int(number_list):
 #     return 0
 
 
-# def halvesies(number_list):
-#     """Return list of numbers from input list, each divided by two.
+def halvesies(number_list):
+     """Return list of numbers from input list, each divided by two.
 
-#         >>> halvesies([2, 6, -2])
-#         [1.0, 3.0, -1.0]
+         >>> halvesies([2, 6, -2])
+         [1.0, 3.0, -1.0]
 
-#     If any of the numbers are odd, make sure you don't round off the half:
+     If any of the numbers are odd, make sure you don't round off the half:
 
-#         >>> halvesies([1, 5])
-#         [0.5, 2.5]
+         >>> halvesies([1, 5])
+         [0.5, 2.5]
 
-#     """
-
-#     return []
+     """
+     divided = [float(num)/2 for num in number_list]
+     return divided
 
 
 # def word_lengths(word_list):
