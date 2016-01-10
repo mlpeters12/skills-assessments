@@ -152,23 +152,25 @@ def word_lengths(word_list):
      return length
 
 
-# def sum_numbers(number_list):
-#     """Return the sum of all of the numbers in the list.
+ def sum_numbers(number_list):
+     """Return the sum of all of the numbers in the list.
 
-#     Python has a built-in function, `sum()`, which already does this -- but for
-#     this exercise, you should not use it.
+     Python has a built-in function, `sum()`, which already does this -- but for
+     this exercise, you should not use it.
 
-#         >>> sum_numbers([1, 2, 3, 10])
-#         16
+         >>> sum_numbers([1, 2, 3, 10])
+         16
 
-#     Any empty list should return the sum of zero:
+     Any empty list should return the sum of zero:
 
-#         >>> sum_numbers([])
-#         0
+         >>> sum_numbers([])
+         0
 
-#     """
-
-#     return None
+     """
+     starting_point =0
+     for num in number_list:
+        starting_point += num
+     return starting_point
 
 
 # def mult_numbers(number_list):
