@@ -90,67 +90,110 @@ def count_unique(input_string):
     
 
 
-# def translate_to_pirate_talk(phrase):
-#     """Translate phrase to pirate talk.
+def translate_to_pirate_talk(phrase):
+    """Translate phrase to pirate talk.
 
-#     Given a phrase, translate each word to the Pirate-speak equivalent.
-#     Words that cannot be translated into Pirate-speak should pass through
-#     unchanged. Return the resulting sentence.
+    Given a phrase, translate each word to the Pirate-speak equivalent.
+    Words that cannot be translated into Pirate-speak should pass through
+    unchanged. Return the resulting sentence.
 
-#     Here's a table of English to Pirate translations:
+    Here's a table of English to Pirate translations:
 
-#     English     Pirate
-#     ----------  ----------------
-#     sir         matey
-#     hotel       fleabag inn
-#     student     swabbie
-#     boy         matey
-#     madam       proud beauty
-#     professor   foul blaggart
-#     restaurant  galley
-#     your        yer
-#     excuse      arr
-#     students    swabbies
-#     are         be
-#     lawyer      foul blaggart
-#     the         th'
-#     restroom    head
-#     my          me
-#     hello       avast
-#     is          be
-#     man         matey
+    English     Pirate
+    ----------  ----------------
+    sir         matey
+    hotel       fleabag inn
+    student     swabbie
+    boy         matey
+    madam       proud beauty
+    professor   foul blaggart
+    restaurant  galley
+    your        yer
+    excuse      arr
+    students    swabbies
+    are         be
+    lawyer      foul blaggart
+    the         th'
+    restroom    head
+    my          me
+    hello       avast
+    is          be
+    man         matey
 
-#     For example:
+    For example:
 
-#         >>> translate_to_pirate_talk("my student is not a man")
-#         'me swabbie be not a matey'
+        >>> translate_to_pirate_talk("my student is not a man")
+        'me swabbie be not a matey'
 
-#     You should treat words with punctuation as if they were different
-#     words:
+    You should treat words with punctuation as if they were different
+    words:
 
-#         >>> translate_to_pirate_talk("my student is not a man!")
-#         'me swabbie be not a man!'
+        >>> translate_to_pirate_talk("my student is not a man!")
+        'me swabbie be not a man!'
 
-#     """
+    """
+    translator_dict = {"sir":"matey",
+                    "hotel":"fleabag inn",
+                    "student":"swabbie",
+                    "boy":"matey",
+                    "madam":"proud beauty",
+                    "professor":"foul blaggart",
+                    "restaurant":"galley",
+                    "your":"yer",
+                    "excuse":"arr",
+                    "students":"swabbies",
+                    "are":"be",
+                    "lawyer":"foul blaggart",
+                    "the":"th'",
+                    "restroom":"head",
+                    "my":"me",
+                    "hello":"avast",
+                    "is":"be",
+                    "man":"matey"
+                    }
 
-#     return ""
+    pirate_speak = []
+    string_list = phrase.split()
+
+    for word in string_list:
+        if word in translator_dict.keys():
+            pirate_word = translator_dict[word]
+            pirate_speak.append(pirate_word)
+        else:
+            pirate_speak.append(word)
+
+    pirate_sentence = " ".join(pirate_speak)
+
+    return pirate_sentence
 
 
-# def sort_by_word_length(words):
-#     """Given list of words, return list of ascending [(len, [words])].
+def sort_by_word_length(words):
+    """Given list of words, return list of ascending [(len, [words])].
 
-#     Given a list of words, return a list of tuples, ordered by word-length.
-#     Each tuple should have two items---the length of the words for that
-#     word-length, and the list of words of that word length.
+    Given a list of words, return a list of tuples, ordered by word-length.
+    Each tuple should have two items---the length of the words for that
+    word-length, and the list of words of that word length.
 
-#     For example:
+    For example:
 
-#         >>> sort_by_word_length(["ok", "an", "apple", "a", "day"])
-#         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
+        >>> sort_by_word_length(["ok", "an", "apple", "a", "day"])
+        [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
 
-#     """
+    """
+    dictionary = {}
 
-#     return []
+    # word_list = sorted(words,key=len)
+
+    for word in words:
+        if len(word) not in dictionary:
+            dictionary[len(word)] = [word]
+        else:
+            dictionary[len(word)] = dictionary[len(word)] + [word]
+    
+    wordlength_list = dictionary.items()
+    sorted_list = sorted(wordlength_list)
+
+    return sorted_list
 
 
 # def get_sum_zero_pairs(input_list):
