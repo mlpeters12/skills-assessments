@@ -271,7 +271,6 @@ def join_strings_with_comma(list_of_words):
         return string_list + last_word
 
 
-
 ##############################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
 
